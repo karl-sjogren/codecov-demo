@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { sum, subtract, divide } from './sample';
+import { sum } from './sample';
 
 describe('sample', () => {
   test('adds 1 + 2 to equal 3', () => {
