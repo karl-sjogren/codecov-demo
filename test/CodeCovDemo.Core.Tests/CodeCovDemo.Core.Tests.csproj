@@ -1,3 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CodeCovDemo.Core\CodeCovDemo.Core.csproj" />
+  </ItemGroup>
+
 </Project>

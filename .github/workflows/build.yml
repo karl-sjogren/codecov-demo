@@ -207,6 +207,31 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         files: coverage-report/Cobertura.xml
 
+    - name: Convert TRX to JUnit
+      shell: bash
+      run: |
+        export PATH="$PATH:/root/.dotnet/tools"
+        shopt -s extglob globstar
+
+        # Ensure unique names for the files
+        mkdir trx-files
+        for f in ./**/*.trx; do mv -n "$f" "trx-files/$RANDOM.trx"; done
+
+        dotnet tool install -g trx2junit
+        trx2junit --output junit-summary/ ./trx-files/*.trx
+
+    - name: Combine JUnit files
+      shell: pwsh
+      run: |
+        Copy-Item **/junit.xml -Destination ./junit-summary/ -Recurse
+        ./scripts/merge-junit-files.ps1 ./junit-summary/ ./junit.xml
+
+    - name: Upload tests to Codecov
+      uses: codecov/test-results-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: junit.xml
+
     - name: Upload coverage history
       uses: actions/upload-artifact@v4
       with:
