@@ -2169,7 +2169,7 @@ __metadata:
     stylelint-config-standard-scss: "npm:^14.0.0"
     typescript: "npm:^5.7.3"
     undici: "npm:^7"
-    vite: "npm:^6.1.1"
+    vite: "npm:^6.1.4"
     vite-plugin-mkcert: "npm:^1.17.6"
     vitest: "npm:^3.0.6"
     webdriverio: "npm:^9.8.0"
@@ -6924,6 +6924,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss@npm:^8.5.3":
+  version: 8.5.3
+  resolution: "postcss@npm:8.5.3"
+  dependencies:
+    nanoid: "npm:^3.3.8"
+    picocolors: "npm:^1.1.1"
+    source-map-js: "npm:^1.2.1"
+  checksum: 10/6d7e21a772e8b05bf102636918654dac097bac013f0dc8346b72ac3604fc16829646f94ea862acccd8f82e910b00e2c11c1f0ea276543565d278c7ca35516a7c
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -8641,13 +8652,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^6.1.1":
-  version: 6.1.1
-  resolution: "vite@npm:6.1.1"
+"vite@npm:^6.1.4":
+  version: 6.2.5
+  resolution: "vite@npm:6.2.5"
   dependencies:
-    esbuild: "npm:^0.24.2"
+    esbuild: "npm:^0.25.0"
     fsevents: "npm:~2.3.3"
-    postcss: "npm:^8.5.2"
+    postcss: "npm:^8.5.3"
     rollup: "npm:^4.30.1"
   peerDependencies:
     "@types/node": ^18.0.0 || ^20.0.0 || >=22.0.0
@@ -8689,7 +8700,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10/3e70efdb4a87d0ccd1d5f019522cebd3e0e9e173df01dc58f50781a152f19a20c8e6597a3d50b79612309f925a3bd4aa0916ae0cfd2cf57e0e27750d441ec3cb
+  checksum: 10/354023589439e7e2bcb77af79d24cd06ce20cfc48b409e663c44e515b373b89eb8f29362223eac16a3ff080d3114e40bc5df158372279d92ad03eb270f9e9762
   languageName: node
   linkType: hard
 
